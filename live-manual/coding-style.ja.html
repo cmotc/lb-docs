@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    coding-style -
+    Live システムマニュアル
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Live システムマニュアル" />
+  <meta name="dc.author" content="Live システムプロジェクト &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Live システムプロジェクト &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="2015-05-01"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. \\  \\ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. \\  \\ You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/. \\  \\ The complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL-3 file." />
+
+  <meta name="generator" content="SiSU 7.1.2 of 2015w20/1 (2015-05-18) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="ja">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://live.debian.net/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://live.debian.net" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  <!-- SiSU Search -->
+<td align="center" bgcolor="#ffffff">
+<a name="search"></a>
+<form method="get" action="http://complete.sisudoc.org/cgi-bin/sisu_7a_sqlite.cgi" target="_top">
+<font size="2">
+<input type="text" name="s1" size="24" maxlength="255" />
+<input type="hidden" name="db" value="SiSU.7a.manual" />
+<input type="hidden" name="ltd" value="1000" />
+<input type="hidden" name="off" value="0" />
+<input type="hidden" name="doc" value="live-manual" /><br />
+<input type="submit" name="search" value="search doc" />
+<input type="submit" name="search" value="search db" />
+</font></form>
+</td>
+<!-- SiSU Search -->
+
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="bugs.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="procedures.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Live システムマニュアル
+  </h1>
+
+<h1 class="minitoc">
+    About
+  </h1>
+
+<h1 class="minitoc">
+    このマニュアルについて
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.ja.html" target="_top">
+    1. このマニュアルについて
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#8">
+    1.1 せっかちな人向け
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#12">
+    1.2 用語
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#29">
+    1.3 著者
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#44">
+    1.4 この文書への貢献
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.ja.html#46">
+  1.4.1 変更の適用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.ja.html#60">
+  1.4.2 翻訳
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Live Systems Projectへの貢献
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.ja.html" target="_top">
+    2. Live Systems Projectについて
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#74">
+    2.1 動機
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#75">
+  2.1.1 現在の Live システムの問題点
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#85">
+  2.1.2 自身の Live システムを作成する理由
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#93">
+    2.2 哲学
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#94">
+  2.2.1 Debian「main」の変更しないパッケージしか使いません
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#98">
+  2.2.2 Live システム固有のパッケージ設定はありません
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#102">
+    2.3 連絡先
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    ユーザ
+  </h1>
+
+<h1 class="minitoc">
+    インストール
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.ja.html" target="_top">
+    3. インストール
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#109">
+    3.1 要件
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#117">
+    3.2 live-build のインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#123">
+  3.2.1 Debian リポジトリから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#126">
+  3.2.2 ソースから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#137">
+  3.2.3 「スナップショット」から
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#139">
+    3.3 live-boot と live-config のインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#141">
+  3.3.1 Debian リポジトリから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#143">
+  3.3.2 ソースから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#155">
+  3.3.3 「スナップショット」から
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    基本
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.ja.html" target="_top">
+    4. 基本
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#162">
+    4.1 Live システムとは何?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#170">
+    4.2 ビルド済みイメージのダウンロード
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#172">
+    4.3 ウェブ Live イメージビルダーの利用
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#174">
+  4.3.1 ウェブビルダーの使い方と注意
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#178">
+    4.4 最初の段階: ISO hybrid イメージのビルド
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#189">
+    4.5 ISO hybrid Live イメージの利用
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#191">
+  4.5.1 ISOイメージの実際のメディアへの書き込み
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#194">
+  4.5.2 ISO hybrid イメージのUSBメモリへのコピー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#199">
+  4.5.3 USBメモリの空きスペースの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#206">
+  4.5.4 Live メディアのブート
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#210">
+    4.6 仮想マシンを利用したテスト
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#217">
+  4.6.1 QEMU でのISOイメージのテスト
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#224">
+  4.6.2 VirtualBox でのISOイメージのテスト
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#232">
+    4.7 HDDイメージのビルド及び利用
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#244">
+    4.8 netboot イメージのビルド
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#257">
+  4.8.1 DHCP サーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#261">
+  4.8.2 TFTP サーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#266">
+  4.8.3 NFSサーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#274">
+  4.8.4 ネットワーク経由のブートをテストする方法
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#277">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#283">
+    4.9 ウェブブート
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#285">
+  4.9.1 ウェブブートファイルの取得
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#291">
+  4.9.2 ウェブブートイメージの起動
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    ツールの概要
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.ja.html" target="_top">
+    5. ツールの概要
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#299">
+    5.1 live-build パッケージ
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#309">
+  5.1.1 <tt>lb config</tt> コマンド
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#319">
+  5.1.2 <tt>lb build</tt> コマンド
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#321">
+  5.1.3 <tt>lb clean</tt> コマンド
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#323">
+    5.2 live-boot パッケージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#327">
+    5.3 live-config パッケージ
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    設定の管理
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.ja.html" target="_top">
+    6. 設定の管理
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ja.html#332">
+    6.1 設定変更への対応
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ja.html#334">
+  6.1.1 自動化スクリプトを使う理由は? それは何をするもの?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ja.html#337">
+  6.1.2 自動化スクリプトの使用例
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ja.html#344">
+    6.2 Git経由で公開されている設定の複製
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    収録内容の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.ja.html" target="_top">
+    7. 独自化の概要
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#358">
+    7.1 ビルド時とブート時の設定
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#361">
+    7.2 ビルド段階
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#364">
+    7.3 ファイルによる lb config の補完
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#366">
+    7.4 独自化タスク
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    インストールするパッケージの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.ja.html" target="_top">
+    8. インストールするパッケージの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#371">
+    8.1 パッケージソース
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#372">
+  8.1.1 ディストリビューション、アーカイブ領域とモード
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#379">
+  8.1.2 ディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#381">
+  8.1.3 ビルド時に利用するディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#385">
+  8.1.4 実行時に利用するディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#388">
+  8.1.5 追加リポジトリ
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#396">
+    8.2 インストールするパッケージの選択
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#398">
+  8.2.1 パッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#401">
+  8.2.2 メタパッケージの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#409">
+  8.2.3 ローカルパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#413">
+  8.2.4 ローカルバイナリパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#415">
+  8.2.5 生成されたパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#419">
+  8.2.6 条件付き内部パッケージ一覧の利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#428">
+  8.2.7 インストール時のパッケージの削除
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#430">
+  8.2.8 デスクトップ及び言語タスク
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#435">
+  8.2.9 カーネルのフレーバー (種類) とバージョン
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#440">
+  8.2.10 独自のカーネル
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#448">
+    8.3 変更したあるいはサードパーティ製パッケージのインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#455">
+  8.3.1 <tt>packages.chroot</tt> を利用した独自のパッケージのインストール
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#462">
+  8.3.2 APTリポジトリを利用した独自パッケージのインストール
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#465">
+  8.3.3 独自パッケージとAPT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#468">
+    8.4 ビルド時のAPT設定
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#470">
+  8.4.1 apt と aptitude の選択
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#474">
+  8.4.2 APTでのプロキシの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#477">
+  8.4.3 APTの調整による容量節約
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#486">
+  8.4.4 apt や aptitude へのオプションの受け渡し
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#491">
+  8.4.5 APTのピン止め
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    収録内容の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.ja.html" target="_top">
+    9. 収録内容の独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#500">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#505">
+  9.1.1 Live/chroot ローカルインクルード
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#512">
+  9.1.2 バイナリローカルインクルード
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#516">
+    9.2 フック
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#518">
+  9.2.1 Live/chroot ローカルフック
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#520">
+  9.2.2 ブート時フック
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#522">
+  9.2.3 バイナリローカルフック
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#524">
+    9.3 Debconf 質問の preseed
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    実行時の挙動の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html" target="_top">
+    10. 実行時の挙動の独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#530">
+    10.1 live ユーザの独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#539">
+    10.2 ロケールと言語の独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#556">
+    10.3 保持機能
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#578">
+  10.3.1 persistence.conf ファイル
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#583">
+  10.3.2 保持先を複数使いたい場合
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#589">
+  10.3.3 暗号化した保持先の利用
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    バイナリイメージの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.ja.html" target="_top">
+    11. バイナリイメージの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ja.html#617">
+    11.1 ブートローダ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ja.html#624">
+    11.2 ISO メタ情報
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Debian インストーラの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.ja.html" target="_top">
+    12. Debian インストーラの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#634">
+    12.1 Debian インストーラの種類
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#646">
+    12.2 preseed による Debian インストーラの独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#649">
+    12.3 Debian インストーラの収録内容の独自化
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    プロジェクト
+  </h1>
+
+<h1 class="minitoc">
+    プロジェクトへの貢献
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.ja.html" target="_top">
+    13. プロジェクトへの貢献
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ja.html#665">
+    13.1 変更を加える
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    バグの報告
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.ja.html" target="_top">
+    14. バグの報告
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#687">
+    14.1 既知の問題
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#692">
+    14.2 最初から再ビルド
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#694">
+    14.3 最新のパッケージを使う
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#696">
+    14.4 情報収集
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#713">
+    14.5 可能であれば失敗している状況を分離する
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#715">
+    14.6 正しいパッケージに対してバグを報告する
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#718">
+  14.6.1 ビルド時のパッケージ収集中
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#721">
+  14.6.2 ビルド時のパッケージインストール中
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#725">
+  14.6.3 ブート時
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#727">
+  14.6.4 実行時
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#729">
+    14.7 調査してください
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#733">
+    14.8 バグの報告先
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    コーディングスタイル
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.ja.html" target="_top">
+    15. コーディングスタイル
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#740">
+    15.1 互換性
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#745">
+    15.2 インデント
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#747">
+    15.3 改行
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#759">
+    15.4 変数
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#778">
+    15.5 その他
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    手順
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.ja.html" target="_top">
+    16. 手順
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.ja.html#786">
+    16.1 主要リリース
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.ja.html#792">
+    16.2 ポイントリリース
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.ja.html#796">
+  16.2.1 ある Debian リリースの最後のポイントリリース
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.ja.html#798">
+  16.2.2 ポイントリリース告知用テンプレート
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Gitリポジトリ
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.ja.html" target="_top">
+    17. Gitリポジトリ
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.ja.html#816">
+    17.1 リポジトリを複数処理
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    例
+  </h1>
+
+<h1 class="minitoc">
+    例
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.ja.html" target="_top">
+    18. 例
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#824">
+    18.1 例の使用
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#828">
+    18.2 チュートリアル 1: デフォルトイメージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#837">
+    18.3 チュートリアル 2: ウェブブラウザユーティリティ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#845">
+    18.4 チュートリアル 3: 私的イメージ
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.ja.html#848">
+  18.4.1 最初の改訂
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.ja.html#862">
+  18.4.2 2回目の改訂
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#874">
+    18.5 VNC 公衆クライアント
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#888">
+    18.6 128MB USB メモリ向けの基本イメージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#899">
+    18.7 地域化した GNOME デスクトップとインストーラ
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    付録
+  </h1>
+
+<h1 class="minitoc">
+    スタイルガイド
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.ja.html" target="_top">
+    19. スタイルガイド
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.ja.html#914">
+    19.1 著者向けガイドライン
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#917">
+  19.1.1 言語特性
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#950">
+  19.1.2 手順
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.ja.html#989">
+    19.2 翻訳者向けガイドライン
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#993">
+  19.2.1 翻訳の手がかり
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.ja.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.ja.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Live システムマニュアル
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    コーディングスタイル
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#738" class="lnkocn">738</a></label>
+  <h1 class="norm" id="738"><a name="738"></a>
+    15. コーディングスタイル
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#739" class="lnkocn">739</a></label>
+  <p class="i0" id="739">
+    この章では Live システムで利用されているコーディングスタイルについて述べます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#740" class="lnkocn">740</a></label>
+  <p class="bold" id="740"><a name="740"></a> <a id="hc15.1"></a>
+    <a name="c15.1" ></a><a name="h15.1" ></a>15.1 互換性
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#741" class="lnkocn">741</a></label>
+  <ul>
+  <li class="bullet" id="741">
+    Bash シェル固有の書式や記号を使わないでください。例えば配列構造の利用など
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#742" class="lnkocn">742</a></label>
+  <ul>
+  <li class="bullet" id="742">
+    POSIX のサブセットだけを使ってください - 例えば `foo` よりも $(foo) を使ってください。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#743" class="lnkocn">743</a></label>
+  <ul>
+  <li class="bullet" id="743">
+    'sh -n' と 'checkbashisms' によりスクリプトをチェックできます。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#744" class="lnkocn">744</a></label>
+  <ul>
+  <li class="bullet" id="744">
+    シェルコードが全て確実に 'set -e' で動作するようにしてください。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#745" class="lnkocn">745</a></label>
+  <p class="bold" id="745"><a name="745"></a> <a id="hc15.2"></a>
+    <a name="c15.2" ></a><a name="h15.2" ></a>15.2 インデント
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#746" class="lnkocn">746</a></label>
+  <ul>
+  <li class="bullet" id="746">
+    常にスペースよりもタブを使います。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#747" class="lnkocn">747</a></label>
+  <p class="bold" id="747"><a name="747"></a> <a id="hc15.3"></a>
+    <a name="c15.3" ></a><a name="h15.3" ></a>15.3 改行
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#748" class="lnkocn">748</a></label>
+  <ul>
+  <li class="bullet" id="748">
+    通常、行は最大で80文字までです。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#749" class="lnkocn">749</a></label>
+  <ul>
+  <li class="bullet" id="749">
+    「Linux 式」で改行します:
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#750" class="lnkocn">750</a></label>
+  <p class="i0" id="750">
+    悪い例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#751" class="lnkocn">751</a></label>
+  <p class="code" id="751">
+    if foo; then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar<br>
+fi<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#752" class="lnkocn">752</a></label>
+  <p class="i0" id="752">
+    良い例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#753" class="lnkocn">753</a></label>
+  <p class="code" id="753">
+    if foo<br>
+then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar<br>
+fi<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#754" class="lnkocn">754</a></label>
+  <ul>
+  <li class="bullet" id="754">
+    関数についても同様です:
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#755" class="lnkocn">755</a></label>
+  <p class="i0" id="755">
+    悪い例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#756" class="lnkocn">756</a></label>
+  <p class="code" id="756">
+    Foo () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar<br>
+}<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#757" class="lnkocn">757</a></label>
+  <p class="i0" id="757">
+    良い例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#758" class="lnkocn">758</a></label>
+  <p class="code" id="758">
+    Foo ()<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar<br>
+}<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#759" class="lnkocn">759</a></label>
+  <p class="bold" id="759"><a name="759"></a> <a id="hc15.4"></a>
+    <a name="c15.4" ></a><a name="h15.4" ></a>15.4 変数
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#760" class="lnkocn">760</a></label>
+  <ul>
+  <li class="bullet" id="760">
+    変数は常に大文字です。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#761" class="lnkocn">761</a></label>
+  <ul>
+  <li class="bullet" id="761">
+    <i>live-build</i> で利用する変数は先頭を常に <tt>LB_</tt> で始めます。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#762" class="lnkocn">762</a></label>
+  <ul>
+  <li class="bullet" id="762">
+    <i>live-build</i> 内部の一時変数は <tt>&#095;LB_</tt> で始めます。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#763" class="lnkocn">763</a></label>
+  <ul>
+  <li class="bullet" id="763">
+    <i>live-build</i> のローカル変数は <tt>&#095;&#095;LB_</tt> で始めます。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#764" class="lnkocn">764</a></label>
+  <ul>
+  <li class="bullet" id="764">
+    <i>live-config</i> 中のブートパラメータにつながる変数は <tt>LIVE_</tt> で始めます。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#765" class="lnkocn">765</a></label>
+  <ul>
+  <li class="bullet" id="765">
+    <i>live-config</i> 中の他の変数は全て <tt>_</tt> で始めます。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#766" class="lnkocn">766</a></label>
+  <ul>
+  <li class="bullet" id="766">
+    変数は大括弧「{}」で囲みます。例えば <tt>$FOO</tt> ではなく <tt>${FOO}</tt> とします。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#767" class="lnkocn">767</a></label>
+  <ul>
+  <li class="bullet" id="767">
+    空白文字の可能性を考慮し、常に引用符を使って変数を保護します: <tt>${FOO}</tt> ではなく <tt>"${FOO}"</tt> とします。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#768" class="lnkocn">768</a></label>
+  <ul>
+  <li class="bullet" id="768">
+    一貫性を保つため、変数に値を割り当てるときは常に引用符を使います:
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#769" class="lnkocn">769</a></label>
+  <p class="i0" id="769">
+    悪い例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#770" class="lnkocn">770</a></label>
+  <p class="code" id="770">
+    FOO=bar<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#771" class="lnkocn">771</a></label>
+  <p class="i0" id="771">
+    良い例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#772" class="lnkocn">772</a></label>
+  <p class="code" id="772">
+    FOO="bar"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#773" class="lnkocn">773</a></label>
+  <ul>
+  <li class="bullet" id="773">
+    複数の変数を使うときは表現全体を引用符で囲みます:
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#774" class="lnkocn">774</a></label>
+  <p class="i0" id="774">
+    悪い例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#775" class="lnkocn">775</a></label>
+  <p class="code" id="775">
+    if [ -f "${FOO}"/foo/"${BAR}"/bar ]<br>
+then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foobar<br>
+fi<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#776" class="lnkocn">776</a></label>
+  <p class="i0" id="776">
+    良い例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#777" class="lnkocn">777</a></label>
+  <p class="code" id="777">
+    if [ -f "${FOO}/foo/${BAR}/bar" ]<br>
+then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foobar<br>
+fi<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#778" class="lnkocn">778</a></label>
+  <p class="bold" id="778"><a name="778"></a> <a id="hc15.5"></a>
+    <a name="c15.5" ></a><a name="h15.5" ></a>15.5 その他
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#779" class="lnkocn">779</a></label>
+  <ul>
+  <li class="bullet" id="779">
+    sed を呼び出すときは区切り文字に「<tt>|</tt>」を使います。例えば「<tt>sed -e 's|foo|bar|'</tt>」
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#780" class="lnkocn">780</a></label>
+  <ul>
+  <li class="bullet" id="780">
+    比較やテストには <tt>test</tt> コマンドを使わず、「<tt>[</tt>」や「<tt>]</tt>」を使います。例えば「<tt>if [ -x /bin/foo ]; ...</tt>」を使い、「<tt>if test -x /bin/foo; ...</tt>」は使いません。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#781" class="lnkocn">781</a></label>
+  <ul>
+  <li class="bullet" id="781">
+    <tt>test</tt> よりも <tt>case</tt> の方が読みやすく実行速度も早いため、可能な部分ではこちらを使います。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#782" class="lnkocn">782</a></label>
+  <ul>
+  <li class="bullet" id="782">
+    ユーザの環境と混ざる可能性を限定するため、関数の名前には大文字を使います。
+  </li>
+  </ul>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  <!-- SiSU Search -->
+<td align="center" bgcolor="#ffffff">
+<a name="search"></a>
+<form method="get" action="http://complete.sisudoc.org/cgi-bin/sisu_7a_sqlite.cgi" target="_top">
+<font size="2">
+<input type="text" name="s1" size="24" maxlength="255" />
+<input type="hidden" name="db" value="SiSU.7a.manual" />
+<input type="hidden" name="ltd" value="1000" />
+<input type="hidden" name="off" value="0" />
+<input type="hidden" name="doc" value="live-manual" /><br />
+<input type="submit" name="search" value="search doc" />
+<input type="submit" name="search" value="search db" />
+</font></form>
+</td>
+<!-- SiSU Search -->
+
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="bugs.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="procedures.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

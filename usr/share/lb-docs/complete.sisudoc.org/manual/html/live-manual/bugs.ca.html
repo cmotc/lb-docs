@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    bugs -
+    Manual de Live Systems
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Manual de Live Systems" />
+  <meta name="dc.author" content="Projecte Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Projecte Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="01.05.2015"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: Aquest programa &#233;s un programari lliure: es pot redistribuir i/o modificar sota els termes de la Llic&#232;ncia P&#251;blica General de la GNU com &#233;s publicada per la Free Software Foundation, ja sigui la versi&#243; 3 de la Llic&#232;ncia, o (si ho preferiu) qualsevol versi&#243; posterior. \\  \\ Aquest programa es distribueix amb l'esperan&#231;a que sigui &#251;til, per&#242; sense cap garantia, fins i tot sense la garantia impl&#237;cita de COMERCIALITZACI&#211; o ADEQUACI&#211; PER A PROP&#210;SITS DETERMINATS. Vegeu la Llic&#232;ncia General P&#251;blica de la GNU per a m&#233;s detalls. \\  \\ Haurieu de rebre una c&#242;pia de la Llic&#232;ncia P&#251;blica General de la GNU amb aquest programa. Si no &#233;s aix&#237;, consulteu http://www.gnu.org/licenses/. \\  \\ El text complet de la Llic&#232;ncia P&#251;blica General de la GNU es pot trobar a /usr/share/common-licenses/GPL-3." />
+
+  <meta name="generator" content="SiSU 7.1.2 of 2015w20/1 (2015-05-18) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="ca">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://live.debian.net/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://live.debian.net" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  <!-- SiSU Search -->
+<td align="center" bgcolor="#ffffff">
+<a name="search"></a>
+<form method="get" action="http://complete.sisudoc.org/cgi-bin/sisu_7a_sqlite.cgi" target="_top">
+<font size="2">
+<input type="text" name="s1" size="24" maxlength="255" />
+<input type="hidden" name="db" value="SiSU.7a.manual" />
+<input type="hidden" name="ltd" value="1000" />
+<input type="hidden" name="off" value="0" />
+<input type="hidden" name="doc" value="live-manual" /><br />
+<input type="submit" name="search" value="search doc" />
+<input type="submit" name="search" value="search db" />
+</font></form>
+</td>
+<!-- SiSU Search -->
+
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="contributing-to-project.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="coding-style.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Manual de Live Systems
+  </h1>
+
+<h1 class="minitoc">
+    Sobre aquest manual
+  </h1>
+
+<h1 class="minitoc">
+    Sobre aquest manual
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.ca.html" target="_top">
+    1. Sobre aquest manual
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#8">
+    1.1 Per als impacients
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#12">
+    1.2 Termes
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#29">
+    1.3 Autors
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#44">
+    1.4 Contribuir a aquest document
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.ca.html#46">
+  1.4.1 Aplicar canvis
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.ca.html#60">
+  1.4.2 Traducció
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Sobre el Live Systems Project
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.ca.html" target="_top">
+    2. Sobre el Live Systems Project
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.ca.html#74">
+    2.1 Motivació
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#75">
+  2.1.1 Què passa amb els sistemes vius actuals
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#85">
+  2.1.2 Per què crear el nostre pròpi sistema viu?
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ca.html#93">
+    2.2 Filosofia
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#94">
+  2.2.1 Només paquets Debian sense modificacions de la secció "main"
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#98">
+  2.2.2 Paquets del sistema viu sense cap configuració
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ca.html#102">
+    2.3 Contacte
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Usuari
+  </h1>
+
+<h1 class="minitoc">
+    Instal·lació
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.ca.html" target="_top">
+    3. Instal·lació
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.ca.html#109">
+    3.1 Requisits
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.ca.html#117">
+    3.2 Instal·lació de live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#123">
+  3.2.1 Des del repositori de Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#126">
+  3.2.2 A partir del codi font
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#137">
+  3.2.3 A partir d'instantànies
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.ca.html#139">
+    3.3 Instal.lació de live-boot i live-config
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#141">
+  3.3.1 Des del repositori de Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#143">
+  3.3.2 A partir del codi font
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#155">
+  3.3.3 A partir d'instantànies
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Conceptes bàsics
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.ca.html" target="_top">
+    4. Conceptes bàsics
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#162">
+    4.1 Què és un sistema viu?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#170">
+    4.2 Descàrrega d'imatges prefabricades
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#172">
+    4.3 Ús del servei de construcció d'imatges en viu web
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#174">
+  4.3.1 Ús i advertències sobre el servei web
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#178">
+    4.4 Primers passos: construcció d'una imatge ISO híbrida
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#189">
+    4.5 Usar una imatge ISO híbrida en viu
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#191">
+  4.5.1 Gravar una imatge ISO en un medi físic
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#194">
+  4.5.2 Copiar una imatge ISO híbrida en un dispositiu  USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#199">
+  4.5.3 Utilitzar l'espai lliure en una memòria USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#206">
+  4.5.4 Arrencar el medi en viu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#210">
+    4.6 Utilitzar una màquina virtual per a fer proves
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#217">
+  4.6.1 Provar una imatge ISO amb QEMU
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#224">
+  4.6.2 Provar una imatge ISO amb VirtualBox
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#232">
+    4.7 Construir i utilitzar una imatge HDD
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#244">
+    4.8 Construir una imatge netboot
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#257">
+  4.8.1 Servidor DHCP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#261">
+  4.8.2 Servidor TFTP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#266">
+  4.8.3 Servidor NFS
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#274">
+  4.8.4 Com provar l'arrencada en xarxa
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#277">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#283">
+    4.9 Webbooting
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#285">
+  4.9.1 Obtenir els fitxers webboot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#291">
+  4.9.2 Arrencar imatges webboot
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Descripció general de les eines
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.ca.html" target="_top">
+    5. Descripció general de les eines
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ca.html#299">
+    5.1 El paquet live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ca.html#309">
+  5.1.1 L'ordre <tt>lb config</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ca.html#319">
+  5.1.2 L'ordre <tt>lb build</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ca.html#321">
+  5.1.3 L'ordre <tt>lb clean</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ca.html#323">
+    5.2 El paquet live-boot
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ca.html#327">
+    5.3 El paquet live-config
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Gestió d'una configuració
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.ca.html" target="_top">
+    6. Gestió d'una configuració
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ca.html#332">
+    6.1 Gestionar canvis en la configuració
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ca.html#334">
+  6.1.1 Per què utilitzar scripts auto? Què fan?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ca.html#337">
+  6.1.2 Utilitzar scripts auto d'exemple
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ca.html#344">
+    6.2 Clonar una configuració publicada via Git
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització dels continguts
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.ca.html" target="_top">
+    7. Visió general de la personalització
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#358">
+    7.1 Configuració durant la construcció vs. durant l'arrencada
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#361">
+    7.2 Etapes de la construcció
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#364">
+    7.3 Suplementar lb config amb fitxers
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#366">
+    7.4 Tasques de personalització
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització de la instal·lació de paquets
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.ca.html" target="_top">
+    8. Personalització de la instal·lació de  paquets
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#371">
+    8.1 Fonts dels paquets
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#372">
+  8.1.1 Distribució, àrees d'arxiu i mode
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#379">
+  8.1.2 Miralls de distribució
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#381">
+  8.1.3 Miralls de distribució utilitzats en temps  de construcció
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#385">
+  8.1.4 Miralls de distribució utilitzats en temps d'execució
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#388">
+  8.1.5 Repositoris addicionals
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#396">
+    8.2 Selecció dels paquets a instal·lar
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#398">
+  8.2.1 Llistes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#401">
+  8.2.2 Ús dels metapaquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#409">
+  8.2.3 Llistes locals de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#413">
+  8.2.4 Llistes locals de paquets per a l'etapa binary
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#415">
+  8.2.5 Generar llistes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#419">
+  8.2.6 Ús de condicionals dins de les llistes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#428">
+  8.2.7 Eliminar paquets durant la instal·lació
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#430">
+  8.2.8 Tasques d'escriptori i llenguatge
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#435">
+  8.2.9 Tipus i versió del nucli
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#440">
+  8.2.10 Nuclis personalitzats
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#448">
+    8.3 Instal·lació de paquets  modificats o de tercers
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#455">
+  8.3.1 Fer servir <tt>packages.chroot</tt> per a instaŀar paquets personalitzats
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#462">
+  8.3.2 Fer servir un repositori APT per a instal·lar paquets personalitzats
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#465">
+  8.3.3 Paquets personalitzats i APT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#468">
+    8.4 Configurar APT en temps de construcció
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#470">
+  8.4.1 Elegir apt o aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#474">
+  8.4.2 L'ús d'un proxy amb APT
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#477">
+  8.4.3 Afinar APT per a estalviar espai
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#486">
+  8.4.4 Passar opcions per a apt o aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#491">
+  8.4.5 APT pinning
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personalització dels continguts
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.ca.html" target="_top">
+    9. Personalització dels continguts
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ca.html#500">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#505">
+  9.1.1 Live/chroot local includes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#512">
+  9.1.2 Binary local includes
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ca.html#516">
+    9.2 Scripts ganxo (Hooks)
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#518">
+  9.2.1 Live/chroot local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#520">
+  9.2.2 Scripts ganxo durant l'arrencada
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#522">
+  9.2.3 Binary local hooks
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ca.html#524">
+    9.3 Preconfiguració de les preguntes de Debconf
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització dels comportaments en temps d'execució
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html" target="_top">
+    10. Personalització dels comportaments en  temps d'execució
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#530">
+    10.1 Personalitzar l'usuari en viu
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#539">
+    10.2 Personalització de l'entorn local i el  llenguatge
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#556">
+    10.3 Persistència
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#578">
+  10.3.1 El fitxer persistence.conf
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#583">
+  10.3.2 Utilitzar diversos medis persistents
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#589">
+  10.3.3 Persistència amb xifratge
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personalització de la imatge binària
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.ca.html" target="_top">
+    11. Personalització de la imatge binària
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ca.html#617">
+    11.1 Carregadors d'arrencada
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ca.html#624">
+    11.2 metadades ISO
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització de l'instal·lador de debian
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.ca.html" target="_top">
+    12. Personalització de l'instal·lador de debian
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ca.html#634">
+    12.1 Tipus d'instal·lador de Debian
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ca.html#646">
+    12.2 Personalització de l'instal·lador de Debian amb preconfiguració
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ca.html#649">
+    12.3 Personalitzar el contingut de l'instal·lador de Debian
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Projecte
+  </h1>
+
+<h1 class="minitoc">
+    Contribuir al projecte
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.ca.html" target="_top">
+    13. Contribuir al projecte
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ca.html#665">
+    13.1 Fer canvis
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Informar dels errors
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.ca.html" target="_top">
+    14. Informar dels errors
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#687">
+    14.1 Problemes coneguts
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#692">
+    14.2 Reconstruir des de zero
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#694">
+    14.3 Fer servir paquets actualitzats
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#696">
+    14.4 Recopilar informació
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#713">
+    14.5 Aïllar el cas que falla, si és possible
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#715">
+    14.6 Utilitzar el paquet correcte per a informar de l'error
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#718">
+  14.6.1 A l'hora de construir mentre bootstrapping
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#721">
+  14.6.2 A l'hora de construir, durant la instal·lació de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#725">
+  14.6.3 En el moment d'arrencar
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#727">
+  14.6.4 En temps d'execució
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#729">
+    14.7 Fer la recerca
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#733">
+    14.8 On informar dels errors
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Estil de Codi
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.ca.html" target="_top">
+    15. Estil de Codi
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#740">
+    15.1 Compatibilitat
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#745">
+    15.2 Indentació
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#747">
+    15.3 Ajust de línia
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#759">
+    15.4 Variables
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#778">
+    15.5 Miscel·lània
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Procediments
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.ca.html" target="_top">
+    16. Procediments
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.ca.html#786">
+    16.1 Publicacions majors
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.ca.html#792">
+    16.2 Publicacions puntuals
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.ca.html#796">
+  16.2.1 Ùltima publicació puntual d'una versió de Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.ca.html#798">
+  16.2.2 Plantilla per a anunciar una publicació puntual
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Repositoris Git
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.ca.html" target="_top">
+    17. Repositoris Git
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.ca.html#818">
+    17.1 Gestió de múltiples repositoris
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.ca.html" target="_top">
+    18. Exemples
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#826">
+    18.1 Ús dels exemples
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#830">
+    18.2 Tutorial 1: Una imatge per defecte
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#839">
+    18.3 Tutorial 2: Una utilitat de navegador web
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#847">
+    18.4 Tutorial 3: Una imatge personalitzada
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.ca.html#850">
+  18.4.1 Primera revisió
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.ca.html#864">
+  18.4.2 Segona revisió
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#876">
+    18.5 Un client per a un quiosc VNC
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#890">
+    18.6 Una imatge bàsica per a un dispositiu USB de 128MB
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#901">
+    18.7 Un escriptori GNOME localitzat i amb instal·lador
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Apèndix
+  </h1>
+
+<h1 class="minitoc">
+    Style guide
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.ca.html" target="_top">
+    19. Guia d'estil
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.ca.html#916">
+    19.1 Instruccions per als autors
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ca.html#919">
+  19.1.1 Característiques lingüístiques
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.ca.html#952">
+  19.1.2 Procediments
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.ca.html#991">
+    19.2 Directrius per als traductors
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ca.html#995">
+  19.2.1 Consells de traducció
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.ca.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.ca.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Manual de Live Systems
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Informar dels errors
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#681" class="lnkocn">681</a></label>
+  <h1 class="norm" id="681"><a name="681"></a>
+    14. Informar dels errors
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#682" class="lnkocn">682</a></label>
+  <p class="i0" id="682">
+    Live systems està lluny de ser perfecte, però volem que sigui el més perfecte possible - amb la vostra ajuda. No dubtar d'informar sobre un error. És millor omplir un informe dues vegades que mai. No obstant això, aquest capítol inclou recomanacions sobre com presentar bons informes d'errors.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#683" class="lnkocn">683</a></label>
+  <p class="i0" id="683">
+    Per als impacients
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#684" class="lnkocn">684</a></label>
+  <ul>
+  <li class="bullet" id="684">
+    Sempre consultar primer les actualitzacions del estat de la imatge a la nostra pàgina web a ‹<a href="http://live-systems.org/" target="_top">http://live-systems.org/</a>› per a veure els problemes coneguts.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#685" class="lnkocn">685</a></label>
+  <ul>
+  <li class="bullet" id="685">
+    Abans d'enviar un informe d'errors, sempre tractar de reproduir l'error amb <b>les versions més recents</b> de la branca de <i>live-build</i>, <i>live-boot</i>, <i>live-config</i> i <i>live-tools</i> què utilitzeu (com la darrera versió 4.x de <i>live-build</i> si s'utilitza <i>live-build</i> 4).
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#686" class="lnkocn">686</a></label>
+  <ul>
+  <li class="bullet" id="686">
+    Intentar donar <b>la informació més específica possible</b> sobre l'error. Això inclou (almenys) la versió de <i>live-build</i>, <i>live-boot</i>, <i>live-config</i> i <i>live-tools</i> i la distribució del sistema en viu que s'està construint.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#687" class="lnkocn">687</a></label>
+  <p class="bold" id="687"><a name="687"></a> <a id="hc14.1"></a>
+    <a name="c14.1" ></a><a name="h14.1" ></a>14.1 Problemes coneguts
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#688" class="lnkocn">688</a></label>
+  <p class="i0" id="688">
+    Ja que les distribucions Debian <b>testing</b> i Debian <b>unstable</b> són blancs mòbils, quan s'especifica una d'elles com sistema de destinació, no sempre és possible construir amb èxit.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#689" class="lnkocn">689</a></label>
+  <p class="i0" id="689">
+    Si això és massa difícil, no construir un sistema basat en <b>testing</b> o <b>unstable</b>, sinó més aviat, utilitzar <b>stable</b>. <i>live-build</i> sempre construeix la versió <b>stable</b> per defecte.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#690" class="lnkocn">690</a></label>
+  <p class="i0" id="690">
+    El problemes coneguts es mostren sota la secció 'status' a la nostra pàgina web a ‹<a href="http://live-systems.org/" target="_top">http://live-systems.org/</a>›.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#691" class="lnkocn">691</a></label>
+  <p class="i0" id="691">
+    Està fora de l'abast d'aquest manual ensenyar a identificar correctament i solucionar els problemes dels paquets de les distribucions en desenvolupament, però, hi ha dues coses que sempre es pot provar: Si la construcció falla quan la distribució de destinació és <b>testing</b>, provar <b>unstable</b>. Si <b>unstable</b> tampoc funciona, tornar a <b>testing</b> i fer un pin de la versió més recent del paquet que falla de <b>unstable</b> (veure  <a href="customizing-package-installation.ca.html#apt-pinning">APT pinning</a>  per a més detalls).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#692" class="lnkocn">692</a></label>
+  <p class="bold" id="692"><a name="692"></a> <a id="hc14.2"></a>
+    <a name="c14.2" ></a><a name="h14.2" ></a>14.2 Reconstruir des de zero
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#693" class="lnkocn">693</a></label>
+  <p class="i0" id="693">
+    Per a assegurar-se que un error en particular no és causat per un sistema mal construït, reconstruir sempre tot el sistema en viu a partir de zero per veure si l'error és reproduïble.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#694" class="lnkocn">694</a></label>
+  <p class="bold" id="694"><a name="694"></a> <a id="hc14.3"></a>
+    <a name="c14.3" ></a><a name="h14.3" ></a>14.3 Fer servir paquets actualitzats
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#695" class="lnkocn">695</a></label>
+  <p class="i0" id="695">
+    La utilització de paquets obsolets pot causar problemes significatius al tractar de reproduir (i en última instància, arreglar) el problema. Comprovar que el sistema de construcció està actualitzat i tots els paquets inclosos en la imatge estan també actualitzats.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#696" class="lnkocn">696</a></label>
+  <p class="bold" id="696"><a name="696"></a> <a id="hcollect-information"></a>
+    <a name="h14.4" ></a><a name="collect-information" ></a>14.4 Recopilar informació
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#697" class="lnkocn">697</a></label>
+  <p class="i0" id="697">
+    Proporcionar informació suficient amb l'informe. Incloure, com a mínim, la versió exacta de <i>live-build</i> i els passos per a reproduir-lo. Utilitzar el sentit comú i proporcionar tota altra informació pertinent si es pensa que aixó pot ajudar a resoldre el problema.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#698" class="lnkocn">698</a></label>
+  <p class="i0" id="698">
+    Per a treure el màxim profit del informe d'errors, es requereix com a mínim la informació següent:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#699" class="lnkocn">699</a></label>
+  <ul>
+  <li class="bullet" id="699">
+    Arquitectura del sistema amfitrió
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#700" class="lnkocn">700</a></label>
+  <ul>
+  <li class="bullet" id="700">
+    Distribució del sistema amfitrió
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#701" class="lnkocn">701</a></label>
+  <ul>
+  <li class="bullet" id="701">
+    Versió de <i>live-build</i> al sistema amfitrió
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#702" class="lnkocn">702</a></label>
+  <ul>
+  <li class="bullet" id="702">
+    Versió de <i>debootstrap</i> i/o <i>cdebootstrap</i> al sistema amfitrió
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#703" class="lnkocn">703</a></label>
+  <ul>
+  <li class="bullet" id="703">
+    Arquitectura del sistema en viu
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#704" class="lnkocn">704</a></label>
+  <ul>
+  <li class="bullet" id="704">
+    Distribució del sistema en viu
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#705" class="lnkocn">705</a></label>
+  <ul>
+  <li class="bullet" id="705">
+    Versió de <i>live-boot</i> al sistema amfitrió
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#706" class="lnkocn">706</a></label>
+  <ul>
+  <li class="bullet" id="706">
+    Versió de <i>live-config</i> al sistema amfitrió
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#707" class="lnkocn">707</a></label>
+  <ul>
+  <li class="bullet" id="707">
+    Versió de <i>live-tools</i> al sistema amfitrió
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#708" class="lnkocn">708</a></label>
+  <p class="i0" id="708">
+    Es pot generar un log del procés de construcció mitjançant l'ordre <tt>tee</tt>. Recomanem fer-ho automàticament amb un script <tt>auto/build</tt> (veure  <a href="managing-a-configuration.ca.html#managing-a-configuration">Gestió d'una configuració</a>  per a més detalls).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#709" class="lnkocn">709</a></label>
+  <p class="code" id="709">
+    # lb build 2&gt;&amp;1 | tee build.log<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#710" class="lnkocn">710</a></label>
+  <p class="i0" id="710">
+    Durant l'arrencada, <i>live-boot</i> i <i>live-config</i> emmagatzemen els seus logs a <tt>/var/log/live/</tt>. Comprovar aquest fitxers per a detectar missatges d'error.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#711" class="lnkocn">711</a></label>
+  <p class="i0" id="711">
+    A més, per a descartar altres errors, sempre és una bona idea comprimir el directori <tt>config/</tt> i pujar-lo a algun lloc (<b>no</b> enviar-lo com arxiu adjunt a la llista de correu), perquè puguem tractar de reproduir els errors que s'han trobat. Si això és difícil (per exemple, a causa de la mida del arxiu) es pot utilitzar la sortida de <tt>lb config --dump</tt> que produeix un resum del arbre de configuració (és a dir, fa un llistat dels fitxers dins els subdirectoris de <tt>config/</tt>, però no els inclou).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#712" class="lnkocn">712</a></label>
+  <p class="i0" id="712">
+    Recordar que s'ha d'enviar qualsevol log que es produeixi amb la configuració regional en anglès, per exemple, executar les ordres de <i>live-build</i> començant per <tt>LC_ALL=C</tt> o <tt>LC_ALL=en_US</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#713" class="lnkocn">713</a></label>
+  <p class="bold" id="713"><a name="713"></a> <a id="hc14.5"></a>
+    <a name="c14.5" ></a><a name="h14.5" ></a>14.5 Aïllar el cas que falla, si és possible
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#714" class="lnkocn">714</a></label>
+  <p class="i0" id="714">
+    Si pot ser, aïllar el cas que falla al canvi més petit possible que fa que no funcioni. No sempre és fàcil fer això, per tant, si no es possible fer-ho pel informe, no preocupar-se. No obstant això, si es planeja bé el cicle de desenvolupament, i s'utilitzen petits conjunts de canvis suficients per iteració, es pot ser capaç d'aïllar el problema mitjançant la construcció d'una configuració 'base' més senzilla que s'ajusti a la configuració desitjada més el conjunt de canvis que fa que no funcioni. Si es dificil classificar quins canvis fan que falli, pot ser que s'inclogui massa en cada conjunt de canvis i s'ha de desenvolupar en petits increments.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#715" class="lnkocn">715</a></label>
+  <p class="bold" id="715"><a name="715"></a> <a id="hc14.6"></a>
+    <a name="c14.6" ></a><a name="h14.6" ></a>14.6 Utilitzar el paquet correcte per a informar de l'error
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#716" class="lnkocn">716</a></label>
+  <p class="i0" id="716">
+    Si no és clar quin component és el responsable de l'error o si l'error és general pel que fa als sistemes vius, es pot omplir un informe d'errors sobre el pseudopaquet debian-live.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#717" class="lnkocn">717</a></label>
+  <p class="i0" id="717">
+    No obstant això, estarem molt agraïts si s'intenta limitar la recerca segons el lloc on apareix l'error.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#718" class="lnkocn">718</a></label>
+  <p class="bold" id="718"><a name="718"></a> <a id="hc14.6.1"></a>
+    <a name="c14.6.1" ></a><a name="h14.6.1" ></a>14.6.1 A l'hora de construir mentre bootstrapping
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#719" class="lnkocn">719</a></label>
+  <p class="i0" id="719">
+    <i>live-build</i> crea primer un sistema Debian bàsic amb <i>debootstrap</i> o <i>cdebootstrap</i>. Depenent de l'eina utilitzada i la distribució Debian que s'està creant mitjançant el bootstrapping, pot fallar. Si un error apareix aquí, comprovar si l'error està relacionat amb un paquet específic de Debian (el més probable), o si està relacionat a l'eina bootstraping en si mateixa.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#720" class="lnkocn">720</a></label>
+  <p class="i0" id="720">
+    En ambdós casos, això no és un error del sistema en viu, sinó de Debian en si mateix i, probablement, no ho podem arreglar directament. Informar del error sobre l'eina de debootstrapping o el paquet que falla.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#721" class="lnkocn">721</a></label>
+  <p class="bold" id="721"><a name="721"></a> <a id="hc14.6.2"></a>
+    <a name="c14.6.2" ></a><a name="h14.6.2" ></a>14.6.2 A l'hora de construir, durant la instal·lació de paquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#722" class="lnkocn">722</a></label>
+  <p class="i0" id="722">
+    <i>live-build</i> instal·la paquets addicionals del arxiu de Debian i en funció de la distribució Debian utilitzada i de l'estat diari de l'arxiu, pot fallar. Si un error apareix aquí, comprovar si l'error és també reproduïble en un sistema normal.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#723" class="lnkocn">723</a></label>
+  <p class="i0" id="723">
+    Si aquest és el cas, no es tracta d'un error del sistema en viu, sinó de Debian - Informar d'això sobre el paquet que falla. Executar <i>debootstrap</i> per separat de la construcció del sistema Live o executar <tt>lb bootstrap --debug</tt> per a tenir més informació.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#724" class="lnkocn">724</a></label>
+  <p class="i0" id="724">
+    A més, si es fa servir un mirall local i/o qualsevol tipus de proxy i s'està experimentant algun problema, sempre s'ha de mirar de reproduir-lo fent un bootstrapping a partir d'un mirall oficial.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#725" class="lnkocn">725</a></label>
+  <p class="bold" id="725"><a name="725"></a> <a id="hc14.6.3"></a>
+    <a name="c14.6.3" ></a><a name="h14.6.3" ></a>14.6.3 En el moment d'arrencar
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#726" class="lnkocn">726</a></label>
+  <p class="i0" id="726">
+    Si la imatge no arrenca, informar a la llista de correu, juntament amb la informació sol·licitada a  <a href="bugs.ca.html#collect-information">Recopilar informació</a>.  No oblidar-se d'esmentar, com/quan la imatge falla, ja sigui amb virtualització o maquinari real. Si s'utilitza una tecnologia de virtualització d'algun tipus, sempre fer la prova amb maquinari real abans d'informar d'un error. Proporcionar una captura de pantalla de l'error és també molt útil.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#727" class="lnkocn">727</a></label>
+  <p class="bold" id="727"><a name="727"></a> <a id="hc14.6.4"></a>
+    <a name="c14.6.4" ></a><a name="h14.6.4" ></a>14.6.4 En temps d'execució
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#728" class="lnkocn">728</a></label>
+  <p class="i0" id="728">
+    Si un paquet s'ha instal·lat correctament, però falla quan s'executa el sistema Live, això és probablement un error al sistema en viu. No obstant això:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#729" class="lnkocn">729</a></label>
+  <p class="bold" id="729"><a name="729"></a> <a id="hc14.7"></a>
+    <a name="c14.7" ></a><a name="h14.7" ></a>14.7 Fer la recerca
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#730" class="lnkocn">730</a></label>
+  <p class="i0" id="730">
+    Abans de presentar l'informe d'errors, cercar a la web el missatge d'error o símptoma que s'està rebent. Ja que és molt poc probable que sigui l'única persona que té un problema en particular. Sempre hi ha una possibilitat que hagi estat discutit en un altre lloc i hi hagi una possible solució, pegat o s'hagi proposat una solució alternativa.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#731" class="lnkocn">731</a></label>
+  <p class="i0" id="731">
+    S'ha de prestar especial atenció a la llista de correu dels sistemes en viu, així com a la pàgina web, ja que és probable que continguin la informació més actualitzada. Si aquesta informació existeix, incloure una referènca a aquesta en l'informe d'errors.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#732" class="lnkocn">732</a></label>
+  <p class="i0" id="732">
+    A més, s'hauria de comprovar les llistes d'errors actuals de <i>live-build</i>, <i>live-boot</i>, <i>live-config</i> i <i>live-tools</i> per a veure si ja s'ha informat sobre alguna cosa semblant .
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#733" class="lnkocn">733</a></label>
+  <p class="bold" id="733"><a name="733"></a> <a id="hc14.8"></a>
+    <a name="c14.8" ></a><a name="h14.8" ></a>14.8 On informar dels errors
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#734" class="lnkocn">734</a></label>
+  <p class="i0" id="734">
+    El Live Systems Project manté un registre de tots els errors en el sistema de seguiment d'errors de Debian (BTS). per a obtenir informació sobre la utilització del sistema, es pot consultar ‹<a href="https://bugs.debian.org/" target="_top">https://bugs.debian.org/</a>›. També es poden enviar els informes dels errors mitjançant l'ordre <tt>reportbug</tt> del paquet amb el mateix nom.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#735" class="lnkocn">735</a></label>
+  <p class="i0" id="735">
+    En general, s'ha d'informar dels errors en temps de construcció contra el paquet <i>live-build</i>, dels errors durant l'arrencada contra <i>live-boot</i> i dels errors de temps d'execució contra <i>live-config</i>. Si no s'està segur de quin paquet és l'adequat o es necessita més ajuda abans d'enviar un informe d'errors, informar contra el pseudopaquet debian-live. Nosaltres ens farem càrrec d'ell i el reassignarem on sigui procedent.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#736" class="lnkocn">736</a></label>
+  <p class="i0" id="736">
+    Tenir en compte que els errors trobats en les distribucions derivades de Debian (com Ubuntu i altres) no han de ser enviats al BTS de Debian tret que puguin ser reproduïts també en sistemes Debian utilitzant paquets oficials de Debian.
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  <!-- SiSU Search -->
+<td align="center" bgcolor="#ffffff">
+<a name="search"></a>
+<form method="get" action="http://complete.sisudoc.org/cgi-bin/sisu_7a_sqlite.cgi" target="_top">
+<font size="2">
+<input type="text" name="s1" size="24" maxlength="255" />
+<input type="hidden" name="db" value="SiSU.7a.manual" />
+<input type="hidden" name="ltd" value="1000" />
+<input type="hidden" name="off" value="0" />
+<input type="hidden" name="doc" value="live-manual" /><br />
+<input type="submit" name="search" value="search doc" />
+<input type="submit" name="search" value="search db" />
+</font></form>
+</td>
+<!-- SiSU Search -->
+
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="contributing-to-project.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="coding-style.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>
